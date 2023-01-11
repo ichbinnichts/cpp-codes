@@ -1,19 +1,20 @@
 #include <iostream>
-
-
-class Person{
-	public:
-		int age;
-		std::string name;
-};
+#include <ios>
+#include <limits>
 
 int main(){
-	Person person1;
-	person1.name = "John";
-	person1.age = 20;
+	char phrase[85];
+	std::cout << "Type a phrase here: ";
+	std::cin.sync();
+	std::cin.getline(phrase, 85);
 	
-	std::cout << "Person age: "<< person1.age; << std::endl;
-	std::cout << "Person name: "<< person1.name;
+	std::cout << "Your phrase: " << phrase << std::endl;
+	
+	std::cout << "Type another phrase here: ";
+	std::cin.sync();
+	std::cin.getline(phrase, 85);
+	
+	std::cout << "Your other phrase: " << phrase << std::endl;
 	return 0;
 }
 
